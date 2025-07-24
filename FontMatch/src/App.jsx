@@ -1,6 +1,6 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import Explore from './pages/Explore';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import FontPairTool from "./pages/FontPairTool";
 import Header from './components/Header';
 import Footer from './components/Footer';
 
@@ -11,8 +11,8 @@ function App() {
         <Header />
         <main className="flex-grow p-4 bg-gray-50">
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/explore" element={<Explore />} />
+            <Route path="/" element={<HomePage />} />
+            <Route path="/tool" element={<FontPairTool />} />
           </Routes>
         </main>
         <Footer />
@@ -22,3 +22,7 @@ function App() {
 }
 
 export default App;
+
+
+
+

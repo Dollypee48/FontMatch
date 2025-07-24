@@ -30,13 +30,13 @@ function Home() {
         🎨 FontMatch – Google Font Pairing Tool
       </h1>
 
-      {/* Font Selectors */}
+     
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         <FontSelector label="Heading Font" font={headingFont} setFont={setHeadingFont} />
         <FontSelector label="Body Font" font={bodyFont} setFont={setBodyFont} />
       </div>
 
-      {/* Font Size Controls */}
+     
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         <TextControls
           label="Heading"
@@ -50,7 +50,7 @@ function Home() {
         />
       </div>
 
-      {/* Font Preview */}
+     
       <FontPreview
         headingFont={headingFont}
         bodyFont={bodyFont}
@@ -58,7 +58,7 @@ function Home() {
         bodySize={bodySize}
       />
 
-      {/* Google Fonts Link */}
+     
       <div className="bg-gray-50 p-4 rounded border border-gray-200 mt-10">
         <p className="text-sm font-medium mb-2">Google Fonts Link:</p>
         <code className="block text-xs break-all bg-white p-3 rounded border border-gray-300 mb-3">

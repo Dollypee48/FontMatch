@@ -9,7 +9,7 @@ function Header() {
         </Link>
         <nav className="space-x-4">
           <Link to="/" className="text-gray-600 hover:text-black">Home</Link>
-          <Link to="/explore" className="text-gray-600 hover:text-black">Explore</Link>
+          <Link to="/tools" className="text-gray-600 hover:text-black">Preview</Link>
         </nav>
       </div>
     </header>
