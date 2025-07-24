@@ -7,6 +7,10 @@ const fontsRoute = require('./routes/fontsRoute');
 
 app.use(cors());
 
+app.get("/", (req, res) => {
+  res.send("FontMatch backend is running ✅");
+});
+
 app.use('/api/fonts', fontsRoute);
 
 app.listen(PORT, () => {
