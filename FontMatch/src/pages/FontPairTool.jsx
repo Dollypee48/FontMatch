@@ -21,36 +21,45 @@ function Home() {
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(fontLink);
-    alert("Google Fonts link copied to clipboard!");
+    alert("✅ Google Fonts link copied to clipboard!");
   };
 
   return (
-    <div className="max-w-5xl mx-auto p-6">
-      <h1 className="text-4xl font-extrabold mb-8 text-center text-blue-700">
+    <div className="max-w-5xl mx-auto px-4 py-10 bg-blue-50">
+      
+      <h1 className="text-4xl font-extrabold text-center text-blue-700 mb-10">
         🎨 FontMatch – Google Font Pairing Tool
       </h1>
 
      
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-        <FontSelector label="Heading Font" font={headingFont} setFont={setHeadingFont} />
-        <FontSelector label="Body Font" font={bodyFont} setFont={setBodyFont} />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        <FontSelector
+          label="Heading Font"
+          font={headingFont}
+          setFont={setHeadingFont}
+        />
+        <FontSelector
+          label="Body Font"
+          font={bodyFont}
+          setFont={setBodyFont}
+        />
       </div>
 
      
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
         <TextControls
-          label="Heading"
+          label="Heading Size"
           size={headingSize}
           setSize={setHeadingSize}
         />
         <TextControls
-          label="Body"
+          label="Body Size"
           size={bodySize}
           setSize={setBodySize}
         />
       </div>
 
-     
+    
       <FontPreview
         headingFont={headingFont}
         bodyFont={bodyFont}
@@ -58,15 +67,17 @@ function Home() {
         bodySize={bodySize}
       />
 
-     
-      <div className="bg-gray-50 p-4 rounded border border-gray-200 mt-10">
-        <p className="text-sm font-medium mb-2">Google Fonts Link:</p>
-        <code className="block text-xs break-all bg-white p-3 rounded border border-gray-300 mb-3">
+      
+      <div className="bg-blue-50 p-6 rounded-xl border border-blue-200 mt-12 shadow-sm">
+        <p className="text-sm font-semibold text-blue-800 mb-2">
+          Google Fonts Link:
+        </p>
+        <code className="block text-xs font-mono break-all bg-white text-gray-800 p-4 rounded border border-blue-100 mb-4">
           {fontLink}
         </code>
         <button
           onClick={copyToClipboard}
-          className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 text-sm"
+          className="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition"
         >
           Copy Google Fonts Link
         </button>
